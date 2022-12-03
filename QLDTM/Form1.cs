@@ -39,7 +39,7 @@ namespace QLDTM
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox1.Text = "Mã số sinh viên";
-            textBox2.Text = "Mật khẩu kk";
+            textBox2.Text = "Mật khẩu";
             //thêm xóa sửa CSDL
             BTLenh("INSERT[dbo].[DMKHOA]([MAKHOA], [TENKHOA]) VALUES(N'LT', N'NMLT')");
             //Show CSDL
