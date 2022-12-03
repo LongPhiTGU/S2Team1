@@ -38,11 +38,11 @@ namespace QLDTM
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "Mã số sinh viên";
-            textBox2.Text = "Mật khẩu";
+            textBox1.Text = "Mã số sinh viên !!";
+            textBox2.Text = "Mật khẩu AA";
             //thêm xóa sửa CSDL
             BTLenh("INSERT[dbo].[DMKHOA]([MAKHOA], [TENKHOA]) VALUES(N'LT', N'NMLT')");
-            //Show CSDL
+            //Show CSDL lên dgv
             string sqlconsqlcon = @"workstation id=Shopbook.mssql.somee.com;packet size=4096;user id=lehoang1111_SQLLogin_1;pwd=clkf61cvvp;data source=Shopbook.mssql.somee.com;persist security info=False;initial catalog=Shopbook"; 
             cn.ConnectionString=sqlconsqlcon;
             SqlDataAdapter da;
