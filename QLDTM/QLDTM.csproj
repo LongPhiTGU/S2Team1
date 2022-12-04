@@ -61,11 +61,23 @@
     <Compile Include="QLGV.Designer.cs">
       <DependentUpon>QLGV.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMH.Designer.cs">
+      <DependentUpon>QLMH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sua.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sua.Designer.cs">
       <DependentUpon>Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SUAGIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUAGIANGVIEN.Designer.cs">
+      <DependentUpon>SUAGIANGVIEN.cs</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
       <SubType>Form</SubType>
@@ -73,11 +85,23 @@
     <Compile Include="TaiKhoan.Designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="THEMGIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THEMGIANGVIEN.Designer.cs">
+      <DependentUpon>THEMGIANGVIEN.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TIMKIEMGIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TIMKIEMGIANGVIEN.Designer.cs">
+      <DependentUpon>TIMKIEMGIANGVIEN.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -92,14 +116,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLGV.resx">
+      <DependentUpon>QLGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLMH.resx">
+      <DependentUpon>QLMH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sua.resx">
       <DependentUpon>Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUAGIANGVIEN.resx">
+      <DependentUpon>SUAGIANGVIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="THEMGIANGVIEN.resx">
+      <DependentUpon>THEMGIANGVIEN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TIMKIEMGIANGVIEN.resx">
+      <DependentUpon>TIMKIEMGIANGVIEN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
