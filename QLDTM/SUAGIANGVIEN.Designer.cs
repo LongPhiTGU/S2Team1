@@ -373,7 +373,7 @@ namespace QLDTM
             this.Controls.Add(this.groupBox1);
             this.Name = "SUAGIANGVIEN";
             this.Text = "Sửa giảng viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

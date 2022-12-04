@@ -354,7 +354,7 @@ namespace QLDTM
             this.Controls.Add(this.groupBox1);
             this.Name = "THEMGIANGVIEN";
             this.Text = "Thêm giảng viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

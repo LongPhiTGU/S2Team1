@@ -91,6 +91,12 @@
     <Compile Include="THEMGIANGVIEN.Designer.cs">
       <DependentUpon>THEMGIANGVIEN.cs</DependentUpon>
     </Compile>
+    <Compile Include="THEMMONHOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THEMMONHOC.Designer.cs">
+      <DependentUpon>THEMMONHOC.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="TIMKIEMGIANGVIEN.Designer.cs">
       <DependentUpon>TIMKIEMGIANGVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TIMKIEMMONHOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TIMKIEMMONHOC.Designer.cs">
+      <DependentUpon>TIMKIEMMONHOC.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
@@ -134,11 +146,17 @@
     <EmbeddedResource Include="THEMGIANGVIEN.resx">
       <DependentUpon>THEMGIANGVIEN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="THEMMONHOC.resx">
+      <DependentUpon>THEMMONHOC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TIMKIEMGIANGVIEN.resx">
       <DependentUpon>TIMKIEMGIANGVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TIMKIEMMONHOC.resx">
+      <DependentUpon>TIMKIEMMONHOC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
