@@ -32,6 +32,7 @@ namespace QLDTM
         public static SqlConnection cn = new SqlConnection();
         public static void MoSQL()
         {
+            /*
             try
             {
                 string sqlcon = @"Data Source=DESKTOP-NKRR2R8;Initial Catalog=QLDT;Integrated Security=True";
@@ -48,6 +49,7 @@ namespace QLDTM
                 MessageBox.Show("Kết nối CSDLthất bại!");
                 Environment.Exit(0);
             }
+            */
         }
         public static void TatSQL()
         {
@@ -55,16 +57,19 @@ namespace QLDTM
                 cn.Close();
         }
         // select
+        /*
         public DataTable SQLView(string strsql)
-        {
+        {           
             string sqlconsqlcon = @"Data Source=DESKTOP-NKRR2R8;Initial Catalog=QLDT;Integrated Security=True";
             cn.ConnectionString = sqlconsqlcon;
             SqlDataAdapter da = new SqlDataAdapter(strsql, sqlconsqlcon);
             DataSet ds = new DataSet();
             da.Fill(ds);
             TatSQL();
-            return ds.Tables[0];          
+            return ds.Tables[0];   
+            
         }
+        */
         //câu khai báo cho lệnh update, insert, delete
         public void BTLenh(string sql)
         {
@@ -98,12 +103,14 @@ namespace QLDTM
 
         private void btdn_Click(object sender, EventArgs e)
         {
+            /*
             string strsql = "select * from Taikhoan";
-            DataTable dt = SQLView(strsql);
+            DataTable dt = SQLView(strsql);           
             for (int i = 0; i < dt.Rows.Count; i++)
                 if ((dt.Rows[i][0].ToString() == tbmsdn.Text) && (dt.Rows[i][1].ToString()==tbmk.Text))
                     MessageBox.Show("Thành công");
             dataGridView1.DataSource = dt;
+            */
         }
     }
 }
