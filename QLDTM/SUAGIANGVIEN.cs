@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLDTM
 {
-    public partial class Test : Form
+    public partial class SUAGIANGVIEN : Form
     {
-        public Test()
+        public SUAGIANGVIEN()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
