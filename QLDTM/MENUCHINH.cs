@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLDTM
 {
-    public partial class TIMKIEMGIANGVIEN : Form
+    public partial class MENUCHINH : Form
     {
-        public TIMKIEMGIANGVIEN()
+        public MENUCHINH()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

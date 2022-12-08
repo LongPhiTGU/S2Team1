@@ -16,7 +16,7 @@ namespace QLDTM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLMH());
+            Application.Run(new QLGV());
         }
     }
 }
