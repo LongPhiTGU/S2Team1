@@ -1,36 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace QLDTM
 {
     class Database
     {
-        SqlConnection sqlconn;
+        SqlConnection sqlcon;
         SqlDataAdapter da;
         DataSet ds;
-        public Database(string srvname, string dbName)
+        public Database(string srvname, string dbname)
         {
-            string cnnstr = "Data source=" + srvname + "; Initial Catalog=" + dbName + "; Integrated Security = true";
-            sqlconn = new SqlConnection(cnnstr);
+            string strcnn = "Data Source=" + srvname + ";Initial Catalog=" + dbname + ";Integrated Security=True";
+            sqlcon = new SqlConnection(strcnn);
         }
-        public DataTable Excute(string sqlstr)
+        public DataTable Execute(string strsql)
         {
-            da = new SqlDataAdapter(sqlstr, sqlconn);
+            da = new SqlDataAdapter(strsql, sqlcon);
             ds = new DataSet();
             da.Fill(ds);
             return ds.Tables[0];
         }
-        public void ExcuteNonQuery(string strSQL)
+        public void ExcuteNonQuery(string strsql)
         {
-            SqlCommand sqlcmd = new SqlCommand(strSQL, sqlconn);
-            sqlconn.Open();
-            sqlcmd.ExecuteNonQuery();
-            sqlconn.Close();
+            SqlCommand sqlcm = new SqlCommand(strsql, sqlcon);
+            sqlcon.Open();
+            sqlcm.ExecuteNonQuery();
+            sqlcon.Close();
         }
     }
 }
