@@ -14,6 +14,7 @@ namespace QLDTM
     public partial class THEMGIANGVIEN : Form
     {
         Database db;
+       // public string Themgv;
         public THEMGIANGVIEN()
         {
             InitializeComponent();
@@ -23,8 +24,9 @@ namespace QLDTM
         {
             
             this.Close();
-            QLGV QL = new QLGV();
-            QL.Show();
+            //QLGV ql = new QLGV();
+            //ql.hienthi();
+
         }
         public static SqlConnection cn = new SqlConnection();
         /*public static void MoSQL()
@@ -61,14 +63,11 @@ namespace QLDTM
             MessageBox.Show(sql);
             
             db.ExcuteNonQuery(sql);
-            QLGV ql = new QLGV();
-            ql.Show();
             
-           
+                   
             //SqlCommand cmd = new SqlCommand(sql, cn);
             //cmd.ExecuteNonQuery();
             //TatSQL();
-
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -78,7 +77,7 @@ namespace QLDTM
 
         private void THEMGIANGVIEN_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -29,19 +29,30 @@ namespace QLDTM
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.hiểnThịGVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dMSVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLSV10DataSet = new QLDTM.QLSV10DataSet();
+            this.dMSVTableAdapter = new QLDTM.QLSV10DataSetTableAdapters.DMSVTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dMSVBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSV10DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -59,7 +70,9 @@ namespace QLDTM
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(38, 60);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -67,6 +80,24 @@ namespace QLDTM
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1013, 602);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hiểnThịGVToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(151, 28);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.contextMenuStrip1.Click += new System.EventHandler(this.contextMenuStrip1_Click);
+            // 
+            // hiểnThịGVToolStripMenuItem
+            // 
+            this.hiểnThịGVToolStripMenuItem.Name = "hiểnThịGVToolStripMenuItem";
+            this.hiểnThịGVToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.hiểnThịGVToolStripMenuItem.Text = "hiển thị GV";
             // 
             // button1
             // 
@@ -122,6 +153,7 @@ namespace QLDTM
             this.button4.TabIndex = 5;
             this.button4.Text = "XÓA";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -139,6 +171,7 @@ namespace QLDTM
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.button2);
@@ -148,6 +181,23 @@ namespace QLDTM
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TÌM KIẾM";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(67, 46);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(133, 24);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(404, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(277, 30);
+            this.textBox1.TabIndex = 5;
             // 
             // label1
             // 
@@ -159,19 +209,36 @@ namespace QLDTM
             this.label1.TabIndex = 4;
             this.label1.Text = "Từ khóa:";
             // 
-            // textBox1
+            // dMSVBindingSource
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(404, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 30);
-            this.textBox1.TabIndex = 5;
+            this.dMSVBindingSource.DataMember = "DMSV";
+            this.dMSVBindingSource.DataSource = this.qLSV10DataSet;
+            // 
+            // qLSV10DataSet
+            // 
+            this.qLSV10DataSet.DataSetName = "QLSV10DataSet";
+            this.qLSV10DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dMSVTableAdapter
+            // 
+            this.dMSVTableAdapter.ClearBeforeFill = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1201, 133);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 28);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Làm mới";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // QLGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -186,8 +253,11 @@ namespace QLDTM
             this.Load += new System.EventHandler(this.QLGV_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dMSVBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSV10DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +274,12 @@ namespace QLDTM
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private QLSV10DataSet qLSV10DataSet;
+        private System.Windows.Forms.BindingSource dMSVBindingSource;
+        private QLSV10DataSetTableAdapters.DMSVTableAdapter dMSVTableAdapter;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem hiểnThịGVToolStripMenuItem;
+        private System.Windows.Forms.Button button6;
     }
 }

@@ -30,7 +30,7 @@ namespace QLDTM
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace QLDTM
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox5);
@@ -74,12 +74,13 @@ namespace QLDTM
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÊM MÔN HỌC";
             // 
-            // textBox7
+            // comboBox1
             // 
-            this.textBox7.Location = new System.Drawing.Point(339, 498);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(281, 30);
-            this.textBox7.TabIndex = 13;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(337, 495);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(281, 33);
+            this.comboBox1.TabIndex = 13;
             // 
             // label7
             // 
@@ -93,14 +94,14 @@ namespace QLDTM
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(339, 438);
+            this.textBox6.Location = new System.Drawing.Point(341, 435);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(280, 30);
             this.textBox6.TabIndex = 11;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(339, 341);
+            this.textBox5.Location = new System.Drawing.Point(339, 362);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(281, 30);
             this.textBox5.TabIndex = 10;
@@ -205,6 +206,7 @@ namespace QLDTM
             this.button1.TabIndex = 1;
             this.button1.Text = "LƯU";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -242,6 +244,7 @@ namespace QLDTM
             this.Name = "THEMMONHOC";
             this.Text = "Thêm môn học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.THEMMONHOC_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -257,7 +260,6 @@ namespace QLDTM
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
@@ -268,5 +270,6 @@ namespace QLDTM
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
