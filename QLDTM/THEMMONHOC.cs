@@ -12,6 +12,7 @@ namespace QLDTM
 {
     public partial class THEMMONHOC : Form
     {
+        Database db;
         public THEMMONHOC()
         {
             InitializeComponent();
@@ -20,6 +21,20 @@ namespace QLDTM
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void THEMMONHOC_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            db = new Database(@"LAPTOP-988MUB58", "QLSV10");
+            string sql = "insert into DSLOP(MALOP, TENLOP) values('" + textBox1.Text + "', N'" + textBox2.Text + "')";
+            MessageBox.Show(sql);
+
+            db.ExcuteNonQuery(sql);
         }
     }
 }
