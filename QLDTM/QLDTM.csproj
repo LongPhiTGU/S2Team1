@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>QLDTM</RootNamespace>
     <AssemblyName>QLDTM</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,19 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BacHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BacHoc.Designer.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
-    <Compile Include="MENUCHINH.cs">
+    <Compile Include="DangNhapDN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MENUCHINH.Designer.cs">
-      <DependentUpon>MENUCHINH.cs</DependentUpon>
+    <Compile Include="DangNhapDN.Designer.cs">
+      <DependentUpon>DangNhapDN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLGV.cs">
@@ -74,10 +79,11 @@
     <Compile Include="QLMH.Designer.cs">
       <DependentUpon>QLMH.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLSV10DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSV10DataSet.xsd</DependentUpon>
+    <Compile Include="QTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QTV.Designer.cs">
+      <DependentUpon>QTV.cs</DependentUpon>
     </Compile>
     <Compile Include="Sua.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,12 @@
     <Compile Include="TaiKhoan.Designer.cs">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Them.Designer.cs">
+      <DependentUpon>Them.cs</DependentUpon>
+    </Compile>
     <Compile Include="THEMGIANGVIEN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,17 +133,7 @@
     <Compile Include="ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="THÔNGTINCHITIETGV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="THÔNGTINCHITIETGV.Designer.cs">
-      <DependentUpon>THÔNGTINCHITIETGV.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="DangNhap.resx">
-      <DependentUpon>DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MENUCHINH.resx">
-      <DependentUpon>MENUCHINH.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,6 +151,9 @@
     <EmbeddedResource Include="QLMH.resx">
       <DependentUpon>QLMH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QTV.resx">
+      <DependentUpon>QTV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sua.resx">
       <DependentUpon>Sua.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoan.resx">
       <DependentUpon>TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Them.resx">
+      <DependentUpon>Them.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="THEMGIANGVIEN.resx">
       <DependentUpon>THEMGIANGVIEN.cs</DependentUpon>
@@ -187,17 +195,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLSV10DataSet.xsc">
-      <DependentUpon>QLSV10DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLSV10DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLSV10DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLSV10DataSet.xss">
-      <DependentUpon>QLSV10DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

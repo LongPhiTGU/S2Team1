@@ -105,7 +105,7 @@ namespace QLDTM
         {
             db = new Database(@"LAPTOP-988MUB58", "QLSV10");
             string sql = "Select * from DMSV";
-            DataTable dt = db.Excute(sql);
+            DataTable dt = db.Execute(sql);
             dataGridView1.DataSource = dt;
           
             

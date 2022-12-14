@@ -26,5 +26,24 @@ namespace QLDTM
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string pic = "1.jpg";
+            if (textBox2.Text.Length > 3)
+                pic = "2.jpg";
+            if (textBox2.Text.Length > 6)
+                pic = "3.jpg";
+            if (textBox2.Text.Length > 9)
+                pic = "4.jpg";
+            if (textBox2.Text.Length > 12)
+                pic = "5.jpg";
+            pictureBox1.Load(pic);
+        }
     }
 }
